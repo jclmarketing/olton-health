@@ -24,7 +24,7 @@ function homePage() {
     header(p),
 
     `<section class="hero"><div class="container"><div class="hero__grid">
-      <div data-reveal>
+      <div>
         <div class="hero__rating">
           <span class="stars">★★★★★</span>
           <span><strong>100% recommended</strong> · 22 patient reviews</span>
@@ -51,7 +51,7 @@ function homePage() {
           <div><strong>1–3 days</strong><span>Wait time</span></div>
         </div>
       </div>
-      <div class="hero__visual" data-reveal>
+      <div class="hero__visual">
         <span class="hero__sticker">Available this week</span>
         <img src="assets/images/clinic-2.png" alt="Inside Olton Health & Performance clinic in Solihull" loading="eager">
         <div class="hero__badge">
