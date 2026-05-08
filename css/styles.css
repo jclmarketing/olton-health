@@ -87,31 +87,17 @@ section { padding-block: var(--space); }
 .brand {
   display: flex;
   align-items: center;
-  gap: .65rem;
-  font-family: 'Fraunces', serif;
-  font-weight: 600;
-  font-size: 1.15rem;
-  color: var(--ink);
-  letter-spacing: -.01em;
+  flex-shrink: 0;
 }
-.brand__mark {
-  width: 38px; height: 38px;
-  border-radius: 50%;
-  background: var(--navy);
-  color: var(--white);
-  display: grid; place-items: center;
-  font-family: 'Fraunces', serif;
-  font-weight: 600;
-  font-size: 1.1rem;
-  position: relative;
+.brand__logo {
+  height: 46px;
+  width: auto;
+  display: block;
+  border-radius: 6px;
 }
-.brand__mark::after {
-  content: '';
-  position: absolute; inset: 4px;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,.4);
+@media (max-width: 520px) {
+  .brand__logo { height: 38px; }
 }
-.brand:hover { color: var(--navy); }
 .nav__menu {
   display: flex;
   align-items: center;

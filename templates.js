@@ -66,9 +66,8 @@ function header(path = '/') {
   return `
 <header class="site-header">
   <nav class="nav container" aria-label="Main">
-    <a class="brand" href="${p || '/'}">
-      <span class="brand__mark">O</span>
-      <span>Olton Health<br><small style="font-size:.7rem;color:var(--muted);font-weight:400;letter-spacing:.05em;">& Performance</small></span>
+    <a class="brand" href="${p || '/'}" aria-label="Olton Health & Performance — home">
+      <img src="${p}assets/images/logo.png" alt="Olton Health & Performance" width="220" height="55" class="brand__logo">
     </a>
     <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
