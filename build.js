@@ -25,39 +25,60 @@ function homePage() {
 
     `<section class="hero"><div class="container"><div class="hero__grid">
       <div data-reveal>
+        <div class="hero__rating">
+          <span class="stars">★★★★★</span>
+          <span><strong>100% recommended</strong> · 22 patient reviews</span>
+        </div>
         <span class="eyebrow">Solihull · Established 2014</span>
         <h1 class="hero__title">Get back to <em>doing your thing</em>.</h1>
         <p class="lede">Hands-on osteopathy, chartered physiotherapy and clinical Pilates in Olton — built around getting you better, not keeping you in our diary.</p>
         <div class="hero__cta">
-          <a class="btn btn--primary" href="book.html">Book online</a>
-          <a class="btn btn--outline" href="tel:${BIZ.phoneRaw}">${BIZ.phone}</a>
+          <a class="btn btn--primary btn--lg" href="book.html">Book your appointment</a>
+          <a class="btn btn--outline btn--lg" href="tel:${BIZ.phoneRaw}">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            ${BIZ.phone}
+          </a>
         </div>
+        <ul class="hero__assurance">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> First visit free if we can't help</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Most insurers covered</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Blue Light Card 10% off</li>
+        </ul>
         <div class="hero__meta">
-          <div><strong>2014</strong><span>Established</span></div>
-          <div><strong>5★</strong><span>Patient rating</span></div>
-          <div><strong>1st free</strong><span>If we can't help</span></div>
-          <div><strong>10%</strong><span>Blue Light Card</span></div>
+          <div><strong data-count="2014">2014</strong><span>Established</span></div>
+          <div><strong data-count="5" data-suffix="★">5★</strong><span>Patient rating</span></div>
+          <div><strong>45 min</strong><span>First visit</span></div>
+          <div><strong>1–3 days</strong><span>Wait time</span></div>
         </div>
       </div>
       <div class="hero__visual" data-reveal>
+        <span class="hero__sticker">Available this week</span>
         <img src="assets/images/clinic-2.png" alt="Inside Olton Health & Performance clinic in Solihull" loading="eager">
-        <div class="hero__badge"><div><strong>100% recommend</strong><span>22 reviews on Facebook</span></div></div>
+        <div class="hero__badge">
+          <div class="hero__badge__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div>
+            <strong>Senior clinicians only</strong>
+            <span>GOsC · HCPC · CSP · AACP registered</span>
+          </div>
+        </div>
       </div>
     </div></div></section>`,
 
     trustBar(p),
 
     `<section><div class="container">
-      <div class="section__head section__head--split">
+      <div class="section__head section__head--split" data-reveal>
         <div>
           <span class="eyebrow">What we do</span>
           <h2>Six services. One purpose: <br>get you back to full strength.</h2>
         </div>
         <p class="lede">Every patient is different — so every treatment plan is tailored. Pick the service that fits, or come for a consultation and we'll work out the right blend together.</p>
       </div>
-      <div class="cards">
+      <div class="cards" data-reveal-stagger>
         ${SERVICES.map(s => `
-          <article class="card" data-reveal>
+          <article class="card">
             <div class="card__icon">${ICONS[s.icon]}</div>
             <h3>${s.title}</h3>
             <p>${s.short}</p>
@@ -66,10 +87,41 @@ function homePage() {
       </div>
     </div></section>`,
 
+    `<section class="bg-cream"><div class="container">
+      <div class="section__head section__head--center" data-reveal>
+        <span class="eyebrow">How it works</span>
+        <h2>Three steps. No mystery.</h2>
+        <p class="lede">From the moment you book to the moment you walk out pain-free, here's exactly what to expect.</p>
+      </div>
+      <div class="steps" data-reveal-stagger>
+        <article class="step">
+          <h3>Book in 60 seconds</h3>
+          <p>Choose your service, clinician and time online — or call us directly. Most patients are seen within 1–3 working days.</p>
+        </article>
+        <article class="step">
+          <h3>45-minute first visit</h3>
+          <p>Full case history, hands-on examination, plain-English explanation of what's going on, and treatment in the same session. You leave with a plan.</p>
+        </article>
+        <article class="step">
+          <h3>2–6 sessions, typically</h3>
+          <p>We treat for as long as you need and not a session longer. If we don't think we can help on day one, your first visit is free.</p>
+        </article>
+      </div>
+    </div></section>`,
+
+    `<section><div class="container">
+      <div class="stats" data-reveal>
+        <div><span class="stat__num" data-count="11">0</span><span class="stat__label">Years in Solihull</span></div>
+        <div><span class="stat__num" data-count="100" data-suffix="%">0%</span><span class="stat__label">Recommend us</span></div>
+        <div><span class="stat__num" data-count="27">0</span><span class="stat__label">Postcodes covered</span></div>
+        <div><span class="stat__num" data-count="5" data-suffix="★">0★</span><span class="stat__label">Average rating</span></div>
+      </div>
+    </div></section>`,
+
     `<section class="bg-soft"><div class="container">
       <div class="split">
         <div data-reveal>
-          <span class="eyebrow">How it works</span>
+          <span class="eyebrow">Our approach</span>
           <h2>Find the cause. Fix it. Move on.</h2>
           <p>Most people walk in expecting a quick fix or a long course of treatment. We do neither by default. Our job is to understand <em>why</em> something hurts, do the right hands-on and rehab work to settle it, and give you the tools to keep it gone.</p>
           <ul class="prose">
@@ -120,10 +172,10 @@ function homePage() {
         <span class="eyebrow">Patient stories</span>
         <h2>Real people. Real results.</h2>
       </div>
-      <div class="testimonials">
-        <div class="testimonial" data-reveal><p>I'd been struggling with lower back pain for over a year. Within three sessions I was back at the gym, and Rosi gave me the rehab work to keep it that way. Honest, evidence-based and never strung me along.</p><cite>James T.<span>Solihull · Lower back pain</span></cite></div>
-        <div class="testimonial" data-reveal><p>After my marathon training started causing knee pain, the team got to the root of it quickly. Combined sports massage and rehab — I finished my race pain-free.</p><cite>Sarah W.<span>Knowle · Runner's knee</span></cite></div>
-        <div class="testimonial" data-reveal><p>I'd tried physiotherapy elsewhere with no real improvement. The clinical Pilates here was a game changer for my chronic neck pain. I really felt heard.</p><cite>Rachel M.<span>Shirley · Chronic neck pain</span></cite></div>
+      <div class="testimonials" data-reveal-stagger>
+        <div class="testimonial"><div class="testimonial__stars">★★★★★</div><p>I'd been struggling with lower back pain for over a year. Within three sessions I was back at the gym, and Rosi gave me the rehab work to keep it that way. Honest, evidence-based and never strung me along.</p><cite><div>James T.<span>Solihull · Lower back pain</span></div></cite></div>
+        <div class="testimonial"><div class="testimonial__stars">★★★★★</div><p>After my marathon training started causing knee pain, the team got to the root of it quickly. Combined sports massage and rehab — I finished my race pain-free.</p><cite><div>Sarah W.<span>Knowle · Runner's knee</span></div></cite></div>
+        <div class="testimonial"><div class="testimonial__stars">★★★★★</div><p>I'd tried physiotherapy elsewhere with no real improvement. The clinical Pilates here was a game changer for my chronic neck pain. I really felt heard.</p><cite><div>Rachel M.<span>Shirley · Chronic neck pain</span></div></cite></div>
       </div>
     </div></section>`,
 
