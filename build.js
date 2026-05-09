@@ -87,7 +87,7 @@ function homePage() {
       </div>
     </div></section>`,
 
-    `<section class="bg-cream"><div class="container">
+    `<section class="bg-soft"><div class="container">
       <div class="section__head section__head--center" data-reveal>
         <span class="eyebrow">How it works</span>
         <h2>Three steps. No mystery.</h2>
@@ -110,7 +110,7 @@ function homePage() {
     </div></section>`,
 
     `<section><div class="container">
-      <div class="stats" data-reveal>
+      <div class="stats stats--sky" data-reveal>
         <div><span class="stat__num" data-count="11">0</span><span class="stat__label">Years in Solihull</span></div>
         <div><span class="stat__num" data-count="100" data-suffix="%">0%</span><span class="stat__label">Recommend us</span></div>
         <div><span class="stat__num" data-count="27">0</span><span class="stat__label">Postcodes covered</span></div>
@@ -118,7 +118,7 @@ function homePage() {
       </div>
     </div></section>`,
 
-    `<section class="bg-soft"><div class="container">
+    `<section><div class="container">
       <div class="split">
         <div data-reveal>
           <span class="eyebrow">Our approach</span>
@@ -151,8 +151,8 @@ function homePage() {
       </div>
     </div></section>`,
 
-    `<section class="bg-soft"><div class="container">
-      <div class="section__head section__head--split">
+    `<section class="bg-sky-grad"><div class="container">
+      <div class="section__head section__head--split" data-reveal>
         <div>
           <span class="eyebrow">Coverage</span>
           <h2>Trusted by patients across Solihull and Birmingham</h2>
