@@ -57,12 +57,4 @@
   }, { threshold: 0.4 });
   document.querySelectorAll('[data-count]').forEach(el => numIO.observe(el));
 
-  // Subtle parallax for hero visual
-  const heroVisual = document.querySelector('.hero__visual img');
-  if (heroVisual && window.matchMedia('(min-width: 960px)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    window.addEventListener('scroll', () => {
-      const y = Math.min(window.scrollY, 600);
-      heroVisual.style.transform = `scale(1.06) translateY(${y * 0.08}px)`;
-    }, { passive: true });
-  }
 })();
